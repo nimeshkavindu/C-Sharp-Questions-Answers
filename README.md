@@ -89,10 +89,10 @@ enum DaysOfWeek
 DaysOfWeek today = DaysOfWeek.Wednesday;
 Console.WriteLine("Today is: " + today); // Output: Today is: Wednesday
 ```
-14. What is the object data type in C#?
+**14. What is the object data type in C#?**
 
 The object data type is a base type for all other types in C#. It can hold values of any data type, but requires boxing and unboxing for type-safe operations.
-
+```
 object myObject;
 
 myObject = 42;          // An int
@@ -101,98 +101,105 @@ myObject = "Hello";     // A string
 Console.WriteLine(myObject);
 myObject = 3.14;        // A double
 Console.WriteLine(myObject);
-15. What is a variable in C#?
+```
+**15. What is a variable in C#?**
 
 A variable in C# is a named storage location that holds data of a particular type. It allows you to store and manipulate values in your program.
 
-16. How do you declare a variable in C#?
+**16. How do you declare a variable in C#?**
 
 You declare a variable in C# by specifying its data type followed by its name.
-
+```
 int age;
-17. What is the initialization of a variable?
+```
+**17. What is the initialization of a variable?**
 
 Initialization refers to assigning an initial value to a variable when it’s declared. For instance:
-
+```
 int score = 100;
-18. Can you change the data type of a variable after it’s declared?
+```
+**18. Can you change the data type of a variable after it’s declared?**
 
 No, once a variable is declared with a certain data type, you cannot change its data type.
 
-19. What are constants in C#?
+**19. What are constants in C#?**
 
 If you don’t want others (or yourself) to overwrite existing values, you can add the const keyword in front of the variable type.
 
 This will declare the variable as “constant”, which means unchangeable and read-only:
-
+```
 const int myNum = 15;
 myNum = 20; // error
-20. How do you declare multiple variables of the same data type?
+```
+**20. How do you declare multiple variables of the same data type?**
 
 You can declare multiple variables of the same data type in a single line, separating them with commas:
-
+```
 int x, y, z;
-21. Can variable names have spaces in C#?
+```
+**21. Can variable names have spaces in C#?**
 
 No, variable names cannot have spaces. Instead, you can use underscores or camelCase notation for multi-word variable names.
 
 22. What is implicit variable typing in C#?
 
 Implicit typing uses the var keyword to allow the compiler to determine the variable's data type based on the assigned value:
-
+```
 var age = 25;           // Compiler infers age as int
 var name = "John";      // Compiler infers name as string
 var pi = 3.14159;       // Compiler infers pi as double
-23. What are operators in C#?
+```
+**23. What are operators in C#?**
 
 Operators in C# are symbols that perform operations on one or more operands to produce a result.
 
-24. What are arithmetic operators in C#?
+**24. What are arithmetic operators in C#?**
 
 Arithmetic operators perform mathematical operations on numeric operands. Examples include +, -, *, /, and %.
 
-25. How does the modulo operator % work in C#?
+**25. How does the modulo operator % work in C#?**
 
 The modulo operator returns the remainder of a division operation between two numeric operands. For example, 7 % 3 equals 1.
 
-26. What are comparison operators in C#?
+**26. What are comparison operators in C#?**
 
 Comparison operators compare two operands and return a Boolean value (true or false). Examples include ==, !=, <, >, <=, and >=.
 
-27. What is the difference between == and === in C#?
+**27. What is the difference between == and === in C#?**
 
 C# uses only == for equality comparison. Unlike some other languages, C# doesn't have a strict equality operator like ===.
 
-28. What are logical operators in C#?
+**28. What are logical operators in C#?**
 
 Logical operators perform logical operations on Boolean operands. Examples include && (logical AND), || (logical OR), and ! (logical NOT).
 
-29. What are assignment operators in C#?
+**29. What are assignment operators in C#?**
 
 Assignment operators assign values to variables. Examples include =, +=, -=, *=, /=, and %=.
 
-30. What are bitwise operators in C#?
+**30. What are bitwise operators in C#?**
 
 Bitwise operators perform operations on individual bits of numeric operands. Examples include & (AND), | (OR), ^ (XOR), ~ (NOT), << (left shift), and >> (right shift).
 
-31. What are compound assignment operators in C#?
+**31. What are compound assignment operators in C#?**
 
 Compound assignment operators combine an arithmetic or bitwise operation with assignment. Examples include +=, -=, &=, |=, and <<=.
 
-32. How does the += operator work in C#?
+**32. How does the += operator work in C#?**
 
 The += operator adds the value on the right side to the value on the left side and assigns the result to the variable on the left side.
 
 Example:
-
+```
 int num = 5;
 num += 3;  // Equivalent to num = num + 3;
 
 Console.WriteLine(num);  // Output: 8
-33. How do you use the is operator for type checking in C#?
+```
+**33. How do you use the is operator for type checking in C#?**
 
 The is operator checks if an object is compatible with a specific type. It returns true if the object can be cast to the specified type, otherwise false.
-
+```
 using System;
 
 class Vehicle
@@ -218,7 +225,8 @@ class Program
         }
     }
 }
-34. What are the increment and decrement operators ++ and — used for in C#?
+```
+**34. What are the increment and decrement operators ++ and — used for in C#?**
 
 Increment Operators:
 
@@ -231,7 +239,7 @@ i-- (Post-decrement): This operator decrements the value of the variable i by 1 
 Example :
 
 Increment Operators:
-
+```
 int count = 5;
 
 // Post-increment: value is used first, then incremented
@@ -262,18 +270,19 @@ value = 10; // Reset value
 int preDecrementResult = --value;
 Console.WriteLine("Pre-decrement result: " + preDecrementResult);   // Output: 9
 Console.WriteLine("Updated value after pre-decrement: " + value);    // Output: 9
-35. What are short-circuiting operators in C#?
+```
+**35. What are short-circuiting operators in C#?**
 
 Short-circuiting operators (&& and ||) evaluate only the minimum number of expressions necessary to determine the result of a logical expression.
 
 Logical AND (&&): The && operator returns true only if both of its operands are true. If the left operand is false, the right operand is not evaluated, as the result will be false regardless of the right operand's value.
 Logical OR (||): The || operator returns true if at least one of its operands is true. If the left operand is true, the right operand is not evaluated, as the result will be true regardless of the right operand's value.
-36. What is the purpose of the if statement in C#?
+**36. What is the purpose of the if statement in C#?**
 
 The if statement is used for conditional execution. It allows you to specify a block of code that should be executed if a given condition is true.
 
-37. What is the syntax of an if statement in C#?
-
+**37. What is the syntax of an if statement in C#?**
+```
 if (condition)
 {
     // Code to execute if 'condition' is true
@@ -284,16 +293,17 @@ if (x > 10)
 {
     Console.WriteLine("x is greater than 10.");
 }
-38. What is the purpose of the else statement in C#?
+```
+**38. What is the purpose of the else statement in C#?**
 
 The else statement allows you to specify an alternative block of code that should be executed if the condition in the preceding if statement is false.
 
-39. Can you have an else statement without an if statement in C#?
+**39. Can you have an else statement without an if statement in C#?**
 
 No, an else statement must always follow an if statement. It provides an alternative execution path based on the if condition.
 
-40. What is the syntax of an if statement with an else statement in C#?
-
+**40. What is the syntax of an if statement with an else statement in C#?**
+```
 if (condition)
 {
     // Code to execute if 'condition' is true
@@ -312,10 +322,11 @@ else
 {
     Console.WriteLine("x is not greater than 10.");
 }
-41. How does the else if statement work in C#?
+```
+**41. How does the else if statement work in C#?**
 
 The else if statement in C# allows you to create a branching structure that extends the logic of an if statement. It's used when you want to check an additional condition if the condition in the preceding if statement evaluates to false. It's a way to provide an alternative set of instructions to execute when the first condition isn't met.
-
+```
 if (condition1)
 {
     // Code to execute if condition1 is true
@@ -343,16 +354,17 @@ else
 {
     Console.WriteLine("Number is 20 or greater.");
 }
-42. What is the switch statement in C# used for?
+```
+**42. What is the switch statement in C# used for?**
 
 The switch statement is a control flow statement that allows you to evaluate a single expression against multiple possible constant values and execute code blocks corresponding to those values.
 
-43. How does the switch statement work in C#?
+**43. How does the switch statement work in C#?**
 
 The switch statement evaluates an expression and compares it with the values in each case label. If a match is found, the code block associated with that case is executed.
 
-44. What is the syntax of a basic switch statement in C#?
-
+**44. What is the syntax of a basic switch statement in C#?**
+```
 switch (expression)
 {
     case value1:
@@ -385,26 +397,27 @@ switch (day)
         Console.WriteLine("It's some other day.");
         break;
 }
-45. Can the expression in a switch statement be of any data type?
+```
+**45. Can the expression in a switch statement be of any data type?**
 
 The expression in a switch statement must be of a type that's compatible with the types used in the case labels. It's commonly used with integral types, enumeration types, and strings.
 
-46. How does the break statement work within a switch statement in C#?
+**46. How does the break statement work within a switch statement in C#?**
 
 The break statement is used to exit the switch statement after executing the code in the matched case. It prevents the execution of subsequent cases.
 
-47. What is the purpose of the default case in a switch statement in C#?
+**47. What is the purpose of the default case in a switch statement in C#?**
 
 The default case is executed when none of the other case labels match the expression. It's often used to handle unexpected or unhandled values.
 
-48. Can multiple case labels share the same code block in a switch statement in C#?
+**48. Can multiple case labels share the same code block in a switch statement in C#?**
 
 Yes, you can group multiple case labels together to share the same code block. This is called "fall-through" behavior.
 
-49. How can you use the when keyword in a switch statement in C#?
+**49. How can you use the when keyword in a switch statement in C#?**
 
 The when keyword allows you to add additional conditions to individual case blocks. It provides more flexibility in matching cases.
-
+```
 switch (expression)
 {
     case value1 when condition1:
@@ -432,15 +445,16 @@ switch (number)
         Console.WriteLine("Number is 20 or greater.");
         break;
 }
-50. What is the benefit of using a switch statement over multiple if and else if statements?
+```
+**50. What is the benefit of using a switch statement over multiple if and else if statements?**
 
 A switch statement provides a more concise and structured way to handle multiple conditional cases, improving readability and maintainability.
 
-51. What is the difference between the switch statement and the if-else statement in C#?
+**51. What is the difference between the switch statement and the if-else statement in C#?**
 
 The switch statement is used to compare a single expression against multiple constant values, while the if-else statement handles more complex conditional logic.
 
-52. Can you have a switch statement without a default case in C#?
+**52. Can you have a switch statement without a default case in C#?**
 
 Yes, you can omit the default case if handling all possible cases is not necessary or if you're certain that all possible cases are covered.
 
